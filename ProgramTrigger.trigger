@@ -1,4 +1,4 @@
-trigger ProgramTrigger on Program__c(after insert, after update) {
+trigger ProgramTrigger on Program__c(after update) {
 	List<Program__c> reassigned_owner_programs = new List<Program__c>();
 	Set<id> account_ids_without_permission = new Set<id>();
 	Set<id> all_owners = new Set<id>();
